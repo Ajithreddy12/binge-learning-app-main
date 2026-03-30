@@ -1,44 +1,54 @@
+const testimonials = [
+  {
+    quote: "Binge Learning has been a turning point in my career. The mentors made learning easy and effective!",
+    name: "Pooja Bisht",
+    course: "Graphic Design",
+  },
+  {
+    quote: "Joining Binge Learning was the best decision I made. The practical style improved my creativity and output immensely.",
+    name: "Subham Sinha",
+    course: "CAD Course",
+  },
+  {
+    quote: "Personal attention and guidance made me confident to build my design career. I now work on live projects.",
+    name: "Sourya Jain",
+    course: "3D Design",
+  },
+];
+
 const Testimonials = () => {
   return (
-    <section className="py-24 bg-[#4b136f]">
-      <div className="max-w-[1470px] mx-auto px-6 bg-[#4b136f]">
-        <h2 className="text-center text-yellow-500 text-3xl font-bold">
-          What Our Students Say
-        </h2>
-
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          <div className="bg-[#3b0a5f] rounded-xl p-8 text-white/80">
-            <p>
-              "Binge Learning has been a turning point in my career.
-              The mentors made learning easy and effective!"
-            </p>
-            <p className="mt-4 text-yellow-400">
-              – Pooja Bisht, Graphic Design
-            </p>
-          </div>
-
-          <div className="bg-[#3b0a5f] rounded-xl p-8 text-white/80">
-            <p>
-              "Joining Binge Learning was the best decision I made.
-              The practical style improved my creativity."
-            </p>
-            <p className="mt-4 text-yellow-500">
-              – Subham Sinha, CAD Course
-            </p>
-          </div>
-
-          <div className="bg-[#3b0a5f] rounded-xl p-8 text-white/80">
-            <p>
-              "Personal attention and guidance made me confident
-              to build my design career."
-            </p>
-            <p className="mt-4 text-yellow-500">
-              – Sourya Jain, 3D Design
-            </p>
-          </div>
-
+    <section className="py-24 bg-[#f8fafc]">
+      <div className="max-w-[1400px] mx-auto px-6">
+        
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#2a073f] mb-4">
+            Trusted by 23,500+ learners
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Designers and engineers at every level use Binge Learning to bridge theory and practice, build confidence, and master skills companies actually need.
+          </p>
         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((test, index) => (
+            <div key={index} className="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-xl transition shadow-sm">
+              <div className="flex gap-1 mb-6">
+                {"⭐⭐⭐⭐⭐".split("").map((star, i) => (
+                  <span key={i} className="text-yellow-400 text-xl">{star}</span>
+                ))}
+              </div>
+              <p className="text-gray-700 leading-relaxed mb-8 italic">
+                "{test.quote}"
+              </p>
+              <div className="mt-auto border-t border-gray-100 pt-6">
+                <p className="font-bold text-gray-900 text-lg">{test.name}</p>
+                <p className="text-[#3b82f6] font-medium">{test.course}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

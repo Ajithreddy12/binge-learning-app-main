@@ -2,138 +2,100 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-const courses = [
-  { name: "Graphic Design", path: "/courses/graphics" },
-  { name: "3D Design & Modelling", path: "/courses/3d" },
-  { name: "CAD Course", path: "/courses/cad" },
-  { name: "CAE Course", path: "/courses/cae" },
-  { name: "Physics of Design", path: "/courses/physics" },
+const navLinks = [
+  { name: "All Courses", path: "/courses" },
+  { name: "Design & 3D", path: "/courses/design" },
+  { name: "CAE Simulation", path: "/courses/simulation" },
+  { name: "Free Courses", path: "/free-courses" },
+  { name: "Pricing", path: "/#pricing" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [coursesOpen, setCoursesOpen] = useState(false);
 
   const linkClass =
-    "block text-white/80 hover:text-yellow-500 transition font-medium";
+    "block text-white/80 hover:text-yellow-500 transition font-medium text-sm lg:text-base";
 
   return (
-    <nav className="w-full bg-[#3b0a5f] sticky top-0 z-50">
+    <nav className="w-full bg-[#2a073f] sticky top-0 z-50 shadow-md border-b border-white/10">
       {/* Navbar Bar */}
-      <div className="max-w-[1470px] w-full h-[80px] mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-[1400px] w-full h-[80px] mx-auto px-6 flex items-center justify-between">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2 shrink-0">
+          {/* Logo asset loading, mock fallback if it fails */}
           <img
             src={logo}
             alt="Binge Learning Logo"
-            className="h-20 w-20 object-contain"
+            className="h-16 w-16 object-contain"
           />
-          <span className="text-xl font-bold text-yellow-500">Binge</span>
-          <span className="text-xl font-bold text-white">Learning</span>
+          <div className="flex flex-col">
+            <span className="text-xl font-bold text-yellow-500 leading-none">Binge</span>
+            <span className="text-lg font-bold text-white leading-none">Learning</span>
+          </div>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex gap-8 items-center">
-          <NavLink to="/" className={linkClass}>
-            Home
-          </NavLink>
-
-          {/* Courses Dropdown */}
-          <div className="relative group">
-            <span className="cursor-pointer text-white/80 hover:text-yellow-500 font-medium">
-              Courses
-            </span>
-
-            <div className="absolute left-0 top-full mt-3 w-56 bg-[#2a073f] rounded-xl shadow-xl
-                            opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                            transition-all duration-200">
-              <ul className="py-3">
-                {courses.map((course) => (
-                  <li key={course.path}>
-                    <NavLink
-                      to={course.path}
-                      className={({ isActive }) =>
-                        `block px-5 py-2 text-sm transition ${
-                          isActive
-                            ? "text-yellow-500"
-                            : "text-white/80 hover:text-yellow-400"
-                        }`
-                      }
-                    >
-                      {course.name}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <NavLink to="/bl-studio" className={linkClass}>
-            BL Studio
-          </NavLink>
-          <NavLink to="/contact" className={linkClass}>
-            Contact Us
-          </NavLink>
+        <div className="hidden lg:flex gap-6 xl:gap-8 items-center">
+          {navLinks.map((link) => (
+            <NavLink 
+              key={link.name} 
+              to={link.path} 
+              className={({ isActive }) => 
+                isActive && link.path !== "/#pricing" 
+                  ? `${linkClass} text-yellow-500` 
+                  : linkClass
+              }
+            >
+              {link.name}
+            </NavLink>
+          ))}
+          
+          <Link 
+            to="/login" 
+            className="ml-4 px-6 py-2.5 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-400 transition shadow hover:shadow-lg transform hover:-translate-y-0.5"
+          >
+            Log In
+          </Link>
         </div>
 
         {/* Mobile Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden text-white text-2xl"
+          className="lg:hidden text-yellow-500 text-3xl focus:outline-none"
         >
-          ☰
+          {open ? "✕" : "☰"}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden absolute top-[80px] left-0 w-full bg-[#2a073f] border-t border-white/10">
-          <div className="flex flex-col px-6 py-4 space-y-4">
-
-            <NavLink to="/" onClick={() => setOpen(false)} className={linkClass}>
-              Home
-            </NavLink>
-
-            {/* Mobile Courses */}
-            <button
-              onClick={() => setCoursesOpen(!coursesOpen)}
-              className="flex justify-between items-center text-white/80 font-medium"
-            >
-              Courses
-              <span>{coursesOpen ? "−" : "+"}</span>
-            </button>
-
-            {coursesOpen && (
-              <div className="ml-4 space-y-2">
-                {courses.map((course) => (
-                  <NavLink
-                    key={course.path}
-                    to={course.path}
-                    onClick={() => {
-                      setOpen(false);
-                      setCoursesOpen(false);
-                    }}
-                    className={({ isActive }) =>
-                      `block text-sm ${
-                        isActive
-                          ? "text-yellow-500"
-                          : "text-white/70 hover:text-yellow-400"
-                      }`
-                    }
-                  >
-                    {course.name}
-                  </NavLink>
-                ))}
-              </div>
-            )}
-
-            <NavLink to="/bl-studio" onClick={() => setOpen(false)} className={linkClass}>
-              BL Studio
-            </NavLink>
-            <NavLink to="/contact" onClick={() => setOpen(false)} className={linkClass}>
-              Contact Us
-            </NavLink>
+        <div className="lg:hidden absolute top-[80px] left-0 w-full bg-[#1e052d] border-t border-white/10 shadow-xl overflow-y-auto max-h-[calc(100vh-80px)]">
+          <div className="flex flex-col px-6 py-6 space-y-4">
+            {navLinks.map((link) => (
+              <NavLink 
+                key={link.name} 
+                to={link.path} 
+                onClick={() => setOpen(false)} 
+                className={({ isActive }) => 
+                  isActive && link.path !== "/#pricing" 
+                    ? "block text-yellow-500 font-bold text-lg border-b border-white/5 pb-2" 
+                    : "block text-white/80 font-medium text-lg hover:text-yellow-500 border-b border-white/5 pb-2"
+                }
+              >
+                {link.name}
+              </NavLink>
+            ))}
+            
+            <div className="pt-4">
+              <Link 
+                to="/login" 
+                onClick={() => setOpen(false)}
+                className="block w-full text-center px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-400 transition"
+              >
+                Log In
+              </Link>
+            </div>
           </div>
         </div>
       )}
