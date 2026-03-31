@@ -42,21 +42,21 @@ const CourseTracks = () => {
         <div className="space-y-16">
           {categories.map((category, idx) => (
             <div key={idx} className="border-t border-gray-200 pt-16 first:border-0 first:pt-0">
-              <div className="mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+              <div className="mb-10 text-center max-w-3xl mx-auto">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                   {category.title}
                 </h3>
-                <p className="text-gray-600">{category.description}</p>
+                <p className="text-gray-600 text-lg">{category.description}</p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="flex flex-wrap justify-center gap-6 md:gap-8">
                 {category.courses.map((course, cIdx) => (
                   <Link 
                     key={cIdx} 
                     to={course.path}
-                    className="group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl transition flex flex-col h-full"
+                    className="group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl transition flex flex-col w-full sm:w-[340px] lg:w-[320px] xl:w-[300px]"
                   >
-                    <div className="h-40 overflow-hidden relative">
+                    <div className="h-44 sm:h-48 overflow-hidden relative">
                       {/* Using mock bg if img fails to load, but we have imports */}
                       <img 
                         src={course.img} 
