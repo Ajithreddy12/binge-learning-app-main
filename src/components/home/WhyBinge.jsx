@@ -26,14 +26,14 @@ const WhyBinge = () => {
     <section className="py-24 bg-white text-black border-b border-gray-100">
       <div className="max-w-[1400px] mx-auto px-6">
 
-        <div className="mb-16 max-w-2xl">
+        <div className="mb-16 max-w-3xl mx-auto text-center">
           <p className="uppercase tracking-widest text-sm font-bold text-yellow-500 mb-2">
             Why Binge Learning?
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#2a073f]">
             Learn the Essential Skills
           </h2>
-          <p className="text-gray-600 mt-4 text-lg">
+          <p className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
             One comprehensive bundle of Design, 3D, and Engineering Courses 
             so you learn what's actually used in the industry.
           </p>

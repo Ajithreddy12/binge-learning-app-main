@@ -42,7 +42,7 @@ const CourseTracks = () => {
         <div className="space-y-16">
           {categories.map((category, idx) => (
             <div key={idx} className="border-t border-gray-200 pt-16 first:border-0 first:pt-0">
-              <div className="mb-8">
+              <div className="mb-8 text-center max-w-3xl mx-auto">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                   {category.title}
                 </h3>
