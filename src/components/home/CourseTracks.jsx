@@ -30,13 +30,13 @@ const CourseTracks = () => {
     <section className="py-24 bg-gray-50 text-black">
       <div className="max-w-[1400px] mx-auto px-6">
         
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-16 max-w-3xl mx-auto flex flex-col items-center">
+          <span className="inline-flex items-center justify-center uppercase tracking-widest text-xs font-bold text-yellow-600 bg-yellow-50 border border-yellow-100 px-4 py-2 rounded-full mb-6">
+            COURSES
+          </span>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#2a073f]">
-            Build Industry-Ready Skills
+            Building careers together
           </h2>
-          <p className="text-lg text-gray-600">
-            Our courses are grouped by real job tracks, so you can pick the skills recruiters expect for design, simulation, manufacturing, and analytics.
-          </p>
         </div>
 
         <div className="space-y-16">

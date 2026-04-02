@@ -6,25 +6,24 @@ const Hero = () => {
         {/* Left Side: Text and CTAs */}
         <div className="max-w-2xl">
           <p className="uppercase tracking-widest text-sm text-yellow-400 mb-4 font-semibold">
-            BINGE LEARNING IS CHANGING CAREERS. ARE YOU?
+            Learn • Practice • Succeed
           </p>
 
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
-            Everything Design & Engineering Students need to learn.
+            We Turn Learners Into Professionals
           </h1>
 
           <p className="text-white/80 text-lg mb-8 leading-relaxed">
-            Master Graphic Design, 3D Modeling, CAE, CAD, and industry-focused tools 
-            in one place. Built for learners looking to start their careers as professionals.
+            Unlock your potential with Binge Learning. Master Graphic Design, 3D, CAE, CAD, and AI tools through expert mentorship, live classes, and industry-focused training.
           </p>
 
           <div className="flex gap-4 flex-wrap">
             <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-md font-bold text-lg transition shadow-lg transform hover:-translate-y-1">
-              Start Learning Now
+              View Courses
             </button>
 
             <button className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-md font-bold text-lg transition shadow-lg transform hover:-translate-y-1">
-              View Courses
+              Book Demo
             </button>
           </div>
         </div>

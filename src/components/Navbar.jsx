@@ -3,11 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const navLinks = [
-  { name: "All Courses", path: "/courses" },
-  { name: "Design & 3D", path: "/courses/design" },
-  { name: "CAE Simulation", path: "/courses/simulation" },
-  { name: "Free Courses", path: "/free-courses" },
-  { name: "Pricing", path: "/#pricing" },
+  { name: "Home", path: "/" },
+  { name: "Courses", path: "/courses" },
+  { name: "BL Studio", path: "/studio" },
+  { name: "Contact Us", path: "/contact" },
 ];
 
 const Navbar = () => {

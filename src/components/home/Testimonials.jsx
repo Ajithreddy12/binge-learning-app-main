@@ -5,12 +5,12 @@ const testimonials = [
     course: "Graphic Design",
   },
   {
-    quote: "Joining Binge Learning was the best decision I made. The practical style improved my creativity and output immensely.",
+    quote: "Joining Binge Learning was the best decision I made. The practical style improved my creativity.",
     name: "Subham Sinha",
     course: "CAD Course",
   },
   {
-    quote: "Personal attention and guidance made me confident to build my design career. I now work on live projects.",
+    quote: "Personal attention and guidance made me confident to build my design career.",
     name: "Sourya Jain",
     course: "3D Design",
   },
@@ -23,11 +23,8 @@ const Testimonials = () => {
         
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-[#2a073f] mb-4">
-            Trusted by 23,500+ learners
+            What Our Students Say
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Designers and engineers at every level use Binge Learning to bridge theory and practice, build confidence, and master skills companies actually need.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

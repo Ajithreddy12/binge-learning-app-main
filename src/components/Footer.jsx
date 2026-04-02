@@ -97,13 +97,12 @@ const Footer = () => {
 
         </div>
 
-        {/* Brand Text Block */}
         <div className="mt-16 pt-8 border-t border-gray-800 text-gray-400 text-sm leading-relaxed max-w-3xl">
           <p className="mb-4">
-            Binge Learning® offers affordable, student-focused courses to build industry-ready skills in Design, Simulation, QA/QC, Robotics, Manufacturing, and Smart Manufacturing.
+            Binge Learning – Strategic learning and career-focused training helping students build real-world skills and professional confidence.
           </p>
           <p>
-            Binge Learning® Mechanical Engineering © 2026. By Binge Learning Labs
+            © 2025 Binge Learning. All rights reserved. Built with ❤️ by Harsh
           </p>
         </div>
 
