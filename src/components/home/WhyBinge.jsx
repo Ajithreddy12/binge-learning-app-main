@@ -44,13 +44,13 @@ const WhyBinge = () => {
           {features.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col gap-4 items-start"
+              className="flex flex-col gap-4 items-center text-center"
             >
               <div className="w-14 h-14 bg-blue-50 text-[#3b82f6] text-2xl rounded-lg flex items-center justify-center border border-blue-100 shadow-sm">
                 {item.icon}
               </div>
               <div>
-                <h4 className="font-bold text-xl text-gray-900 mb-2">{item.title}</h4>
+                <h4 className="font-bold text-2xl text-gray-900 mb-2">{item.title}</h4>
                 <p className="text-gray-600 leading-relaxed">
                   {item.desc}
                 </p>
