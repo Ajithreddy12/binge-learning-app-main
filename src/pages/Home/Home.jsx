@@ -2,7 +2,7 @@ import Hero from "../../components/home/Hero";
 import WhyBinge from "../../components/home/WhyBinge";
 import CourseTracks from "../../components/home/CourseTracks";
 import StudentWork from "../../components/home/StudentWork";
-import Pricing from "../../components/home/Pricing";
+
 import Testimonials from "../../components/home/Testimonials";
 import FAQ from "../../components/home/FAQ";
 
@@ -13,7 +13,7 @@ const Home = () => {
       <WhyBinge />
       <CourseTracks />
       <StudentWork />
-      <Pricing />
+
       <Testimonials />
       <FAQ />
     </main>
