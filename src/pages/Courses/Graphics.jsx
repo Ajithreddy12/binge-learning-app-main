@@ -76,165 +76,166 @@ const GraphicDesign = () => {
           </div>
         ))}
       </div>
-      {/* COURSE OVERVIEW + PRACTICAL SUPPORT */}
-<div className="max-w-7xl mx-auto px-6 pb-24 grid lg:grid-cols-3 gap-8">
-  
-  {/* LEFT CONTENT */}
-  <div className="lg:col-span-2 space-y-6">
-    <p className="text-gray-300 leading-relaxed">
-      Our 18-week Graphic Designing Course covers every essential design
-      software and creative process you need to become an industry-ready
-      professional. Alongside theory and practice, students work on live
-      client projects and real-time assignments that simulate professional
-      environments.
-    </p>
+      {/* INTRODUCTION TO GRAPHICS */}
+      <div className="max-w-[1470px] mx-auto px-6 pb-24 grid lg:grid-cols-3 gap-8 mt-10">
+        <div className="lg:col-span-2 space-y-6 text-gray-300">
+          <h2 className="text-3xl font-bold text-white mb-2">Introduction to Graphic Design at Binge Learning</h2>
+          <p className="text-yellow-500 font-semibold mb-6">"Visual Storytelling: Where Logic Meets Creativity"</p>
+          <p>
+            In the modern world, design is the first point of contact between a brand and its audience. Our Graphic Design module goes beyond just teaching software; we teach the <span className="text-white font-bold">Psychology of Design</span>, <span className="text-white font-bold">Color Theory</span>, and <span className="text-white font-bold">Typography</span>.
+          </p>
+          <p>
+            Whether you are creating marketing collateral for an aerospace firm, branding a robotics startup, or designing UI for engineering software, this course provides the creative toolkit to communicate complex ideas through stunning visuals.
+          </p>
+        </div>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-fit">
+          <h4 className="text-xl font-semibold mb-4 text-white">Learning Outcomes</h4>
+          <ul className="space-y-4 text-sm text-gray-300">
+            <li className="flex gap-3"><span className="text-[#ff1493] font-bold">1</span> Design professional logos and brand identities from scratch.</li>
+            <li className="flex gap-3"><span className="text-[#00ced1] font-bold">2</span> Manipulate and retouch images for high-end marketing.</li>
+            <li className="flex gap-3"><span className="text-yellow-500 font-bold">3</span> Construct complex layouts for magazines, books, and technical reports.</li>
+            <li className="flex gap-3"><span className="text-green-500 font-bold">4</span> Produce print-ready files for any industrial or commercial application.</li>
+          </ul>
+        </div>
+      </div>
 
-    {/* Feature Cards */}
-    <div className="bg-white/5 rounded-2xl p-6">
-      <h4 className="text-lg font-semibold mb-2">
-        Flexible Duration Options
-      </h4>
-      <p className="text-gray-400 text-sm">
-        Choose between 18-week regular batch or 6-week fast-track intensive
-        program
-      </p>
-    </div>
-
-    <div className="bg-white/5 rounded-2xl p-6">
-      <h4 className="text-lg font-semibold mb-2">
-        Comprehensive Curriculum
-      </h4>
-      <p className="text-gray-400 text-sm">
-        Master 6 industry-standard software tools including Adobe Creative
-        Suite and AI-powered design tools
-      </p>
-    </div>
-
-    <div className="bg-white/5 rounded-2xl p-6">
-      <h4 className="text-lg font-semibold mb-2">
-        Expert Mentorship
-      </h4>
-      <p className="text-gray-400 text-sm">
-        Learn from industry professionals with 10+ years of real-world design
-        experience
-      </p>
-    </div>
-  </div>
-
-  {/* RIGHT CARD */}
-  <div className="bg-white/5 rounded-2xl p-6 h-fit">
-    <h4 className="text-xl font-semibold mb-4">
-      Practical Exposure & Career Support
-    </h4>
-
-    <ul className="space-y-4 text-sm text-gray-300">
-      <li>
-        <span className="font-semibold text-white">Live Client Projects</span>
-        <br />
-        Work on real-world projects for actual clients and gain hands-on
-        experience
-      </li>
-
-      <li>
-        <span className="font-semibold text-white">Professional Portfolio</span>
-        <br />
-        Build a stunning portfolio showcasing your best work
-      </li>
-
-      <li>
-        <span className="font-semibold text-white">Guaranteed Internship</span>
-        <br />
-        Every student receives an internship opportunity
-      </li>
-
-      <li>
-        <span className="font-semibold text-white">Placement Assistance</span>
-        <br />
-        Resume building, interview prep, and hiring partner access
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-      {/* WHAT YOU WILL LEARN */}
-      <div className="max-w-7xl mx-auto px-6 pb-24">
-        <h2 className="text-3xl font-bold  text-yellow-500 text-center mb-4">
-          What You Will Learn
-        </h2>
-        <p className="text-gray-400 text-center mb-12">
-          Master 6 industry-standard software tools with hands-on training
-        </p>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Adobe Photoshop",
-              points: [
-                "Raster graphics fundamentals",
-                "Image editing & retouching",
-                "Compositing & effects",
-                "Design for print & digital",
-              ],
-            },
-            {
-              title: "Adobe Illustrator",
-              points: [
-                "Vector illustrations",
-                "Logo & branding design",
-                "Typography & iconography",
-                "Packaging design",
-              ],
-            },
-            {
-              title: "Adobe InDesign",
-              points: [
-                "Page layouts",
-                "Brochures & magazines",
-                "Publishing workflows",
-                "Editorial design",
-              ],
-            },
-            {
-              title: "CorelDRAW",
-              points: [
-                "Vector layouts",
-                "Professional logo creation",
-                "Print-ready artwork",
-                "Color management",
-              ],
-            },
-            {
-              title: "Canva Pro",
-              points: [
-                "Fast design templates",
-                "Social media creatives",
-                "Brand kit workflows",
-                "Marketing designs",
-              ],
-            },
-            {
-              title: "AI Design Tools",
-              points: [
-                "AI-powered creativity",
-                "Image generation",
-                "Automation workflows",
-                "Latest AI design trends",
-              ],
-            },
-          ].map((tool, i) => (
-            <div
-              key={i}
-              className="bg-white text-black rounded-2xl p-6 shadow-lg"
-            >
-              <h3 className="text-lg font-bold mb-4">{tool.title}</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                {tool.points.map((p, j) => (
-                  <li key={j}>✔ {p}</li>
-                ))}
-              </ul>
+      {/* DETAILED COURSE SYLLABUS */}
+      <div className="max-w-[1470px] mx-auto px-6 pb-24">
+        <h2 className="text-3xl font-bold text-center mb-12">Detailed <span className="text-yellow-500">Course Syllabus</span></h2>
+        <div className="space-y-12">
+          
+          {/* Tool 1 */}
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-2">1. Adobe Photoshop: The Power of Raster & Retouching</h3>
+            <p className="text-gray-400 italic mb-8">Focus: Image Manipulation, Digital Art, and Compositing</p>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h4 className="text-lg font-bold text-[#ff1493] mb-4">Beginner Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Understanding Layers, Masks, and Selection tools.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Introduction to Non-Destructive Editing.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Color Correction and Basic Photo Retouching.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#00ced1] mb-4">Intermediate Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Advanced Compositing: Blending multiple images seamlessly.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Digital Painting and Custom Brush creation.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Creating Web Mockups and Social Media Graphics.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-yellow-500 mb-4">Advanced Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Complex Photo Manipulation and Matte Painting.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Automating workflows with Actions and Batch Processing.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> 3D Textures and Post-Processing for Engineering Renders.</li>
+                </ul>
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Tool 2 */}
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-2">2. Adobe Illustrator: Vector Mastery</h3>
+            <p className="text-gray-400 italic mb-8">Focus: Logo Design, Iconography, and Scalable Graphics</p>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h4 className="text-lg font-bold text-[#ff1493] mb-4">Beginner Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> The Pen Tool: Mastering paths, anchors, and curves.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Working with Shapes, Pathfinder, and Shape Builder.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Foundations of Color Theory and Gradients.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#00ced1] mb-4">Intermediate Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Advanced Typography and Custom Lettering.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Creating Isometric Illustrations (Perfect for technical diagrams).</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Vectorizing hand-drawn sketches and images (Image Trace).</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-yellow-500 mb-4">Advanced Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Brand Identity Design: Creating Style Guides and Brand Books.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Complex Infographic Design for Technical Data.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Preparing files for Large Format Printing and Plotting.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Tool 3 */}
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-2">3. Corel Draw: The Precision Vector Tool</h3>
+            <p className="text-gray-400 italic mb-8">Focus: Print Media, Signage, and Industrial Layouts</p>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h4 className="text-lg font-bold text-[#ff1493] mb-4">Beginner Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Navigating the Corel Workspace vs. Adobe environments.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Node Editing and Object Management.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Layout basics for flyers and business cards.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#00ced1] mb-4">Intermediate Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Interactive Fill and Mesh Fill tools for realistic coloring.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Working with Tables and Multi-page layouts.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Special Effects: Drop Shadows, Contours, and Extrudes.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-yellow-500 mb-4">Advanced Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Variable Data Printing (VDP).</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Preparing files for Laser Cutting and CNC engraving (Technical Design).</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Advanced Print Pre-press and Color Separation (CMYK vs. Pantone).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Tool 4 */}
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-2">4. Adobe InDesign: Publication & Layout Design</h3>
+            <p className="text-gray-400 italic mb-8">Focus: Multi-page Documents, E-books, and Portfolio Layouts</p>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h4 className="text-lg font-bold text-[#ff1493] mb-4">Beginner Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Master Pages and Document Setup.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Character and Paragraph Styles for consistent formatting.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Working with Frames (Image vs. Text).</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#00ced1] mb-4">Intermediate Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Interactive PDF creation (Hyperlinks, Buttons).</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Grid Systems and Advanced Page Layouts.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Data Merge: Automating catalogs and certificates.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-yellow-500 mb-4">Advanced Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Digital Publishing (EPUB) and Interactive Magazines.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Creating high-end Engineering Project Reports and Technical Manuals.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Portfolio Design: Showcasing your CAD/CAE and Design work professionally.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 

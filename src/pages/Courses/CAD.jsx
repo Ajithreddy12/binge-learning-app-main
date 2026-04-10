@@ -56,60 +56,133 @@ const CAD = () => {
         ))}
       </div>
 
-      {/* OVERVIEW */}
+      {/* INTRODUCTION TO CAD */}
       <div className="max-w-7xl mx-auto px-6 pb-24 grid lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-6 text-gray-300">
+          <h2 className="text-3xl font-bold text-white mb-2">Introduction to CAD at Binge Learning</h2>
+          <p className="text-yellow-500 font-semibold mb-6">"From Concept to Creation: Engineering the Future"</p>
           <p>
-            This CAD course focuses on professional drafting workflows,
-            precision drawing standards, and real-world engineering practices
-            used across industries.
+            Computer-Aided Design (CAD) is the backbone of modern engineering. At <span className="text-white font-bold">Binge Learning</span>, we bridge the gap between academic theory and industrial application. Whether you are designing a high-speed turbine for an aircraft, a precision robotic arm, or a complex automotive chassis, our CAD module provides the digital drafting and 3D modeling skills required by top-tier global firms.
           </p>
-
-          {[
-            "Industry-oriented curriculum",
-            "Hands-on drafting assignments",
-            "Professional certification support",
-          ].map((t, i) => (
-            <div key={i} className="bg-white/5 p-6 rounded-xl">
-              {t}
-            </div>
-          ))}
+          <p>
+            Our curriculum focuses on the "Big Three" of the industry: <span className="text-white font-bold">CATIA</span> for advanced surfacing and aerospace, <span className="text-white font-bold">AutoCAD</span> for fundamental precision drafting, and <span className="text-white font-bold">Autodesk Inventor</span> for seamless mechanical assembly and digital prototyping.
+          </p>
         </div>
-
-        <div className="bg-white/5 p-6 rounded-xl">
-          <h4 className="text-xl font-semibold mb-4">
-            Practical Exposure
-          </h4>
-          <ul className="space-y-3 text-sm">
-            <li>✔ Industrial drawings</li>
-            <li>✔ Real project files</li>
-            <li>✔ Internship support</li>
-            <li>✔ Placement assistance</li>
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-fit">
+          <h4 className="text-xl font-semibold mb-4 text-white">Focus Areas</h4>
+          <ul className="space-y-4 text-sm text-gray-300">
+            <li className="flex gap-3"><span className="text-yellow-500">✔</span> Advanced Surfacing & Aerospace</li>
+            <li className="flex gap-3"><span className="text-yellow-500">✔</span> Precision Drafting</li>
+            <li className="flex gap-3"><span className="text-yellow-500">✔</span> seamless Mechanical Assembly</li>
+            <li className="flex gap-3"><span className="text-yellow-500">✔</span> Digital Prototyping</li>
           </ul>
         </div>
       </div>
 
-      {/* WHAT YOU WILL LEARN */}
+      {/* DETAILED COURSE SYLLABUS */}
       <div className="max-w-7xl mx-auto px-6 pb-24">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          What You Will Learn
-        </h2>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            ["AutoCAD Basics", ["2D drafting", "Layers", "Dimensions"]],
-            ["3D Modelling", ["Solid modelling", "Isometric views"]],
-            ["Layouts & Printing", ["Plotting", "Scale management"]],
-          ].map(([title, items], i) => (
-            <div key={i} className="bg-white text-black rounded-2xl p-6">
-              <h3 className="font-bold mb-4">{title}</h3>
-              <ul className="text-sm space-y-2">
-                {items.map((x, j) => (
-                  <li key={j}>✔ {x}</li>
-                ))}
-              </ul>
+        <h2 className="text-3xl font-bold text-center mb-12">Detailed <span className="text-yellow-500">Course Syllabus</span></h2>
+        <div className="space-y-12">
+          
+          {/* Tool 1 */}
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-2">1. AutoCAD: The Blueprint of Engineering</h3>
+            <p className="text-gray-400 italic mb-8">Focus: Precision 2D Drafting & Fundamental 3D Layouts</p>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h4 className="text-lg font-bold text-[#ff1493] mb-4">Beginner Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Introduction to the UI and Workspace.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Mastering Draw and Modify tools (Lines, Polylines, Layers).</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Dimensioning and Annotation standards.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#00ced1] mb-4">Intermediate Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Blocks and Dynamic Blocks for efficiency.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Isometric drawing techniques.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> External References (Xrefs) and Sheet Set Management.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-yellow-500 mb-4">Advanced Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> 3D Mesh and Solid Modeling.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Rendering and Visualization.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Customization using AutoLISP and Scripting.</li>
+                </ul>
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Tool 2 */}
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-2">2. CATIA: The Aerospace & Automotive Standard</h3>
+            <p className="text-gray-400 italic mb-8">Focus: Advanced Surface Modeling & Complex Systems</p>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h4 className="text-lg font-bold text-[#ff1493] mb-4">Beginner (Solid Modeling)</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Sketcher Workbench: Constraint-based designing.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Part Design: Pads, Pockets, Shafts, and Ribs.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Boolean operations and Tree Management.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#00ced1] mb-4">Intermediate (Surface & Wireframe Modeling)</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Generative Shape Design (GSD): Creating complex curves and surfaces.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Wireframe tools: Points, Lines, and Splines in 3D space.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Surface Join, Split, and Trim operations.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-yellow-500 mb-4">Advanced (Assembly & Kinematics)</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Assembly Design: Bottom-up and Top-down approaches.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> DMU Kinematics: Simulating mechanical movements and linkages.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Drafting Workbench: Generating industry-standard technical drawings.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Tool 3 */}
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-2">3. Autodesk Inventor: Digital Prototyping</h3>
+            <p className="text-gray-400 italic mb-8">Focus: Parametric Modeling & Mechanical Assembly</p>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h4 className="text-lg font-bold text-[#ff1493] mb-4">Beginner Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Parametric Sketching and Constraints.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Basic Part Features (Extrude, Revolve, Fillet).</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ff1493] mt-0.5">✔</span> Introduction to the Content Center (Standard Parts).</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#00ced1] mb-4">Intermediate Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Adaptive Modeling and iParts.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Advanced Assembly Constraints and Joint connections.</li>
+                  <li className="flex items-start gap-2"><span className="text-[#00ced1] mt-0.5">✔</span> Sheet Metal Design: Bends, Flanges, and Flat Patterns.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-yellow-500 mb-4">Advanced Level</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Stress Analysis and Frame Generator.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Tube & Pipe and Cable & Harness design.</li>
+                  <li className="flex items-start gap-2"><span className="text-yellow-500 mt-0.5">✔</span> Design Accelerator: Gears, Bearings, and Shafts wizard.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
