@@ -1,4 +1,6 @@
+import React from "react";
 import { Link } from "react-router-dom";
+import { FaArrowRight, FaGraduationCap, FaRocket } from "react-icons/fa";
 import course1 from "../../assets/courses/course1.jpeg";
 import course2 from "../../assets/courses/course2.jpeg";
 import course3 from "../../assets/courses/course3.jpeg";
@@ -7,78 +9,112 @@ import course5 from "../../assets/courses/course5.jpeg";
 
 const categories = [
   {
-    title: "Design & Modeling Courses",
-    description: "Build design output that teams can manufacture: 2D drafting, 3D modeling, assemblies, and graphics.",
+    title: "Design & Modeling",
+    icon: <FaRocket className="text-yellow-500" />,
+    description: "Master 2D drafting, 3D modeling, and visual communication with industry-standard workflows.",
     courses: [
-      { title: "Graphics Design", img: course1, path: "/courses/graphics" },
-      { title: "3D Design & Character Modelling", img: course2, path: "/courses/3d" },
-      { title: "CAD Course", img: course5, path: "/courses/cad" },
+      { title: "Graphics Design", img: course1, path: "/courses/graphics", level: "Beginner - Pro" },
+      { title: "3D Design & Modeling", img: course2, path: "/courses/3d", level: "Intermediate" },
+      { title: "CAD Specialization", img: course5, path: "/courses/cad", level: "Professional" },
     ]
   },
   {
-    title: "CAE Simulation & Physics",
-    description: "Validate before you build. This track covers FEA and simulation workflows used in CAE and R&D teams.",
+    title: "CAE & Engineering",
+    icon: <FaGraduationCap className="text-yellow-500" />,
+    description: "Validate complex designs before manufacturing using advanced FEA and physics-based simulations.",
     courses: [
-      { title: "CAE Course", img: course3, path: "/courses/cae" },
-      { title: "Physics of Design", img: course4, path: "/courses/physics" },
+      { title: "CAE Simulation", img: course3, path: "/courses/cae", level: "Advanced" },
+      { title: "Physics of Design", img: course4, path: "/courses/physics", level: "Professional" },
     ]
   }
 ];
 
 const CourseTracks = () => {
   return (
-    <section className="py-24 bg-gray-50 text-black">
-      <div className="max-w-[1400px] mx-auto px-6">
+    <section className="py-24 bg-[#1a0b2e] text-white overflow-hidden relative">
+      {/* Background Orbs */}
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-yellow-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
-        <div className="text-center mb-16 max-w-3xl mx-auto flex flex-col items-center">
-          <span className="inline-flex items-center justify-center uppercase tracking-widest text-xs font-bold text-yellow-600 bg-yellow-50 border border-yellow-100 px-4 py-2 rounded-full mb-6">
-            COURSES
+        <div className="text-center mb-20">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs font-bold uppercase tracking-widest mb-6">
+            Curated Learning Paths
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#2a073f]">
-            Building careers together
+          <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            Build Your <span className="text-yellow-500">Expertise</span>
           </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            Strategically designed tracks to take you from a curious student to a highly skilled professional.
+          </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-24">
           {categories.map((category, idx) => (
-            <div key={idx} className="border-t border-gray-200 pt-16 first:border-0 first:pt-0">
-              <div className="mb-10 text-center max-w-3xl mx-auto">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-                  {category.title}
-                </h3>
-                <p className="text-gray-600 text-lg">{category.description}</p>
+            <div key={idx} className="relative">
+              {/* Category Header */}
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-white/5 pb-8">
+                <div className="max-w-xl">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-white/5 rounded-xl border border-white/10">
+                      {category.icon}
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold">{category.title}</h3>
+                  </div>
+                  <p className="text-gray-400 leading-relaxed italic">{category.description}</p>
+                </div>
+                <Link to="/courses" className="text-yellow-500 font-bold flex items-center gap-2 group hover:translate-x-2 transition-transform">
+                  Explore All Track <FaArrowRight className="text-sm" />
+                </Link>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+              {/* Course Cards Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.courses.map((course, cIdx) => (
                   <Link 
                     key={cIdx} 
                     to={course.path}
-                    className="group bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl transition flex flex-col w-full sm:w-[340px] lg:w-[320px] xl:w-[300px]"
+                    className="group relative flex flex-col bg-white/5 border border-white/10 rounded-[2rem] overflow-hidden hover:border-yellow-500/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                   >
-                    <div className="h-44 sm:h-48 overflow-hidden relative">
-                      {/* Using mock bg if img fails to load, but we have imports */}
+                    {/* Image Wrapper */}
+                    <div className="relative h-56 overflow-hidden">
                       <img 
                         src={course.img} 
                         alt={course.title} 
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                        <span className="text-white font-medium">View Course →</span>
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#1a0b2e] via-transparent to-transparent opacity-60"></div>
+                      
+                      {/* Badge */}
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 rounded-lg bg-black/40 backdrop-blur-md border border-white/10 text-[10px] font-bold uppercase tracking-wider">
+                          {course.level}
+                        </span>
                       </div>
                     </div>
-                    <div className="p-5 flex-grow flex flex-col justify-between">
-                      <h4 className="font-bold text-lg text-gray-800 group-hover:text-[#3b82f6] transition-colors line-clamp-2">
+
+                    {/* Content */}
+                    <div className="p-8 flex flex-col flex-grow">
+                      <h4 className="text-2xl font-bold mb-4 group-hover:text-yellow-500 transition-colors leading-tight">
                         {course.title}
                       </h4>
+                      <div className="mt-auto flex items-center justify-between opacity-60 group-hover:opacity-100 transition-opacity">
+                        <span className="text-sm font-medium">Learn Industry Skills</span>
+                        <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-yellow-500 group-hover:text-black transition-all">
+                          <FaArrowRight />
+                        </div>
+                      </div>
                     </div>
+
+                    {/* Hover Glow Effect */}
+                    <div className="absolute inset-0 border-[3px] border-yellow-500/0 group-hover:border-yellow-500/20 rounded-[2rem] transition-all pointer-events-none"></div>
                   </Link>
                 ))}
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

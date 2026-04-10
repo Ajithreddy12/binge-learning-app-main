@@ -1,98 +1,104 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight, FaArrowRight } from "react-icons/fa";
 import course1 from "../../assets/courses/course1.jpeg";
-import course2 from"../../assets/courses/course2.jpeg";
+import course2 from "../../assets/courses/course2.jpeg";
 import course3 from "../../assets/courses/course3.jpeg";
 import course4 from "../../assets/courses/course4.jpeg";
-import course5 from"../../assets/courses/course5.jpeg";
+import course5 from "../../assets/courses/course5.jpeg";
 
 const courses = [
-  { title: "Graphics Design", img: course1, path: "/courses/graphics" },
-  { title: "3D Design & Character Modelling", img: course2, path: "/courses/3d" },
-  { title: "CAE Course", img: course3, path: "/courses/cae" },
-  { title: "Physics of Design", img: course4, path: "/courses/physics" },
-  { title: "CAD Course", img: course5, path: "/courses/cad" },
+  { title: "Graphics Design", img: course1, path: "/courses/graphics", category: "Design" },
+  { title: "3D Modeling", img: course2, path: "/courses/3d", category: "3D Design" },
+  { title: "CAE Simulation", img: course3, path: "/courses/cae", category: "Engineering" },
+  { title: "Physics of Design", img: course4, path: "/courses/physics", category: "R&D" },
+  { title: "CAD Specialization", img: course5, path: "/courses/cad", category: "Industry" },
 ];
 
 const CoursesPreview = () => {
   const sliderRef = useRef(null);
 
   const scrollLeft = () => {
-    sliderRef.current.scrollBy({ left: -350, behavior: "smooth" });
+    sliderRef.current.scrollBy({ left: -400, behavior: "smooth" });
   };
 
   const scrollRight = () => {
-    sliderRef.current.scrollBy({ left: 350, behavior: "smooth" });
+    sliderRef.current.scrollBy({ left: 400, behavior: "smooth" });
   };
 
   return (
-    <section className="py-24 bg-[#4b136f]">
-      <div className="max-w-[1470px] mx-auto px-6">
-
-        <div className="text-center mb-16">
-          <p className="uppercase tracking-widest text-sm text-gray-400">
-            COURSES
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Building <span className="text-yellow-500">careers together</span>
-          </h2>
+    <section className="py-20 bg-[#140824] text-white min-h-screen relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+      
+      <div className="max-w-[1470px] mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="max-w-2xl text-center md:text-left mx-auto md:mx-0">
+            <span className="inline-block px-4 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-[10px] font-bold uppercase tracking-widest mb-4">
+              Official Curriculum
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black leading-tight">
+              Building <span className="text-yellow-500">careers</span> <br /> 
+              step by step
+            </h2>
+          </div>
         </div>
 
-        <div className="relative">
-
-          <button
-            onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10
-              w-12 h-12 rounded-full bg-black shadow flex items-center justify-center
-              text-xl hover:bg-black-100"
-          >
-            ‹
-          </button>
-
-          <div
-            ref={sliderRef}
-            className="flex gap-8 overflow-x-auto scroll-smooth px-16 no-scrollbar"
-          >
-            {courses.map((course, index) => (
-              <div
-                key={index}
-                className="min-w-[320px] bg-white rounded-xl shadow-lg
-                  hover:shadow-xl transition"
-              >
-               
+        {/* Courses Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {courses.map((course, index) => (
+            <Link
+              key={index}
+              to={course.path}
+              className="group/card relative flex flex-col bg-white/5 border border-white/10 rounded-[1.5rem] overflow-hidden hover:border-yellow-500/50 transition-all duration-500 hover:-translate-y-2 shadow-lg"
+            >
+              {/* Image Section */}
+              <div className="relative h-48 overflow-hidden">
                 <img
                   src={course.img}
                   alt={course.title}
-                  className="h-48 w-full object-cover rounded-t-xl"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
                 />
-
-                <div className="p-6">
-                  <h3 className="font-semibold text-lg  text-black mb-4">
-                    {course.title}
-                  </h3>
-
-                  <Link
-                    to={course.path}
-                    className="text-yellow-500 font-medium inline-flex items-center gap-2"
-                  >
-                    View Course →
-                  </Link>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#140824] via-[#140824]/40 to-transparent"></div>
+                
+                {/* Category Badge */}
+                <div className="absolute bottom-4 left-6">
+                  <span className="px-3 py-1 rounded-lg bg-white/10 backdrop-blur-xl border border-white/10 text-[10px] font-bold uppercase tracking-wider">
+                    {course.category}
+                  </span>
                 </div>
               </div>
-            ))}
-          </div>
 
-          <button
-            onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10
-              w-12 h-12 rounded-full bg-black shadow flex items-center justify-center
-              text-xl hover:bg-black-100"
-          >
-            ›
-          </button>
-
+              {/* Content Section */}
+              <div className="p-6 flex flex-col">
+                <h3 className="text-xl font-bold mb-4 group-hover/card:text-yellow-500 transition-colors leading-tight">
+                  {course.title}
+                </h3>
+                
+                <div className="flex items-center justify-between mt-auto">
+                  <div className="flex flex-col">
+                    <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Duration</span>
+                    <p className="text-xs text-gray-300 font-medium">6-12 Weeks</p>
+                  </div>
+                  <div className="w-10 h-10 rounded-xl bg-yellow-500/10 flex items-center justify-center text-yellow-500 group-hover/card:bg-yellow-500 group-hover/card:text-black transition-all">
+                    <FaArrowRight className="text-sm" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
 
+        {/* Bottom CTA */}
+        <div className="mt-20 text-center">
+            <p className="text-gray-500 font-medium mb-4">Unsure where to start?</p>
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center gap-3 px-10 py-5 bg-transparent border-2 border-white/10 rounded-full font-bold hover:border-yellow-500 hover:text-yellow-500 transition-all group"
+            >
+              Get Career Guidance <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
+            </Link>
+        </div>
       </div>
     </section>
   );

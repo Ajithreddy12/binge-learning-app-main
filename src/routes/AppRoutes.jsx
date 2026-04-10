@@ -9,6 +9,7 @@ import ThreeD from "../pages/Courses/ThreeD";
 import Contact from "../pages/Contact";
 import BLStudio from "../pages/BLStudio/BLStudio";
 import Footer from "../components/Footer";
+import About from "../pages/About";
 import PhysicsOfDesign from "../pages/Courses/Physics";
 const AppRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
       <Route path="/courses/graphics" element={<Graphics />} />
       <Route path="/courses/3d" element={<ThreeD />} />
       <Route path="/bl-studio" element={<BLStudio />} />
+      <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/Footer" element={<Footer/>} />
     </Routes>

@@ -7,12 +7,15 @@ const Footer = () => {
       <div className="max-w-[1400px] mx-auto px-6">
 
         {/* Back to top button */}
-        <div className="flex justify-start -mt-28 mb-10 pb-4 border-b border-gray-800">
+        <div className="flex justify-start mb-12 pb-6 border-b border-gray-800">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="w-12 h-12 rounded-full bg-yellow-500 hover:bg-yellow-400 text-black flex items-center justify-center text-xl shadow-lg transition"
+            className="group flex items-center gap-4 text-white font-bold hover:text-yellow-500 transition-all"
           >
-            ↑
+            <div className="w-12 h-12 rounded-full bg-yellow-500 group-hover:bg-yellow-400 text-black flex items-center justify-center text-xl shadow-lg transition transform group-hover:-translate-y-1">
+              ↑
+            </div>
+            <span className="text-sm uppercase tracking-widest">Back to top</span>
           </button>
         </div>
 
@@ -22,26 +25,22 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-bold text-white mb-6">Career Paths</h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li><Link to="/login" className="hover:text-yellow-500 transition">Login</Link></li>
               <li><Link to="/courses" className="hover:text-yellow-500 transition">All Courses</Link></li>
-              <li><Link to="/cad" className="hover:text-yellow-500 transition">CAD Path</Link></li>
-              <li><Link to="/simulation" className="hover:text-yellow-500 transition">FEA/CAE Path</Link></li>
-              <li><Link to="/industry4" className="hover:text-yellow-500 transition">Industry 4.0 Path</Link></li>
-              <li><Link to="/metrology" className="hover:text-yellow-500 transition">Metrology Path</Link></li>
-              <li><Link to="/free-courses" className="hover:text-yellow-500 transition">Free Course</Link></li>
+              <li><Link to="/courses/cad" className="hover:text-yellow-500 transition">CAD Path</Link></li>
+              <li><Link to="/courses/cae" className="hover:text-yellow-500 transition">FEA/CAE Path</Link></li>
+              <li><Link to="/courses/graphics" className="hover:text-yellow-500 transition">Graphic Design</Link></li>
+              <li><Link to="/courses/3d" className="hover:text-yellow-500 transition">3D & Rendering</Link></li>
+              <li><Link to="/courses/physics" className="hover:text-yellow-500 transition">Physics of Design</Link></li>
             </ul>
           </div>
 
-          {/* Column 2: Tools */}
+          {/* Column 2: Resources */}
           <div>
-            <h4 className="text-xl font-bold text-white mb-6">Tools</h4>
+            <h4 className="text-xl font-bold text-white mb-6">Resources</h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li><Link to="/paths" className="hover:text-yellow-500 transition">Career Paths</Link></li>
-              <li><Link to="/blog" className="hover:text-yellow-500 transition">Blog</Link></li>
-              <li><Link to="/projects" className="hover:text-yellow-500 transition">Projects</Link></li>
-              <li><Link to="/interviews" className="hover:text-yellow-500 transition">300+ Interview Q&A</Link></li>
-              <li><Link to="/notes" className="hover:text-yellow-500 transition">Notes Library</Link></li>
+              <li><Link to="/bl-studio" className="hover:text-yellow-500 transition">BL Studio</Link></li>
               <li><Link to="/contact" className="hover:text-yellow-500 transition">Contact Us</Link></li>
+              <li><Link to="/about" className="hover:text-yellow-500 transition">Our Vision</Link></li>
             </ul>
           </div>
 
@@ -50,9 +49,7 @@ const Footer = () => {
             <h4 className="text-xl font-bold text-white mb-6">Company</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li><Link to="/about" className="hover:text-yellow-500 transition">About Us</Link></li>
-              <li><Link to="/#pricing" className="hover:text-yellow-500 transition">Pricing</Link></li>
-              <li><Link to="/business" className="hover:text-yellow-500 transition">Business Plan</Link></li>
-              <li><Link to="/#faqs" className="hover:text-yellow-500 transition">FAQs</Link></li>
+              <li><Link to="/contact" className="hover:text-yellow-500 transition">Book a Demo</Link></li>
               <li><Link to="/privacy" className="hover:text-yellow-500 transition">Privacy Policy</Link></li>
               <li><Link to="/terms" className="hover:text-yellow-500 transition">Terms and Conditions</Link></li>
             </ul>

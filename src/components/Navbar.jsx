@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
   { name: "Courses", path: "/courses" },
   { name: "BL Studio", path: "/studio" },
   { name: "Contact Us", path: "/contact" },
