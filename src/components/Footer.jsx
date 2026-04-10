@@ -102,7 +102,7 @@ const Footer = () => {
             Binge Learning – Strategic learning and career-focused training helping students build real-world skills and professional confidence.
           </p>
           <p>
-            © 2025 Binge Learning. All rights reserved. Built with ❤️ by Harsh
+            © 2026 Binge Learning. All rights reserved.
           </p>
         </div>
 
